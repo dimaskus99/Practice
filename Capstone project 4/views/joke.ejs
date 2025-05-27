@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Жарт</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Твій жарт:</h1>
+  <% if (joke.error) { %>
+    <p><%= joke.error %></p>
+  <% } else if (joke.type === "single") { %>
+    <p><%= joke.joke %></p>
+  <% } else { %>
+    <p><strong><%= joke.setup %></strong><br><%= joke.delivery %></p>
+  <% } %>
+  <a href="/">Спробувати ще</a>
+</body>
+</html>

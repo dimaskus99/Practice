@@ -21,7 +21,7 @@ app.post("/joke", async (req, res) => {
         res.render("joke", { joke: jokeData });
     } catch (error) {
         console.error("API Error:", error.message);
-        res.render("joke", { joke: { error: "Не вдалося отримати жарт 😢" } });
+        res.render("joke", { joke: { error: "Не вдалося отримати жарт" } });
     }
 });
 
